@@ -1,0 +1,68 @@
+.leftArrowWrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 37px;
+  height: 61px;
+  margin-left: 25px;
+  margin-top: -30px;
+  cursor: pointer;
+  z-index: 1;
+
+  body.hasHover &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 5px;
+    margin-top: -20px;
+    width: 27px;
+    height: 47px;
+    background-size: contain;
+  }
+}
+
+.rightArrowWrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 37px;
+  height: 61px;
+  margin-right: 25px;
+  margin-top: -30px;
+  cursor: pointer;
+
+  body.hasHover &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 5px;
+    margin-top: -20px;
+    width: 27px;
+    height: 47px;
+    background-size: contain;
+  }
+}
+
+.dotsWrapper {
+  bottom: 25px;
+
+  li button:before {
+    font-size: 12px;
+    color: #fff;
+  }
+
+  li.slick-active button:before {
+    color: #fff;
+  }
+}
+
+.sliderWrapper {
+  min-height: 0;
+  min-width: 0;
+}

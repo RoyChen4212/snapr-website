@@ -1,0 +1,42 @@
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 24px;
+  right: 36px;
+  top: 36px;
+}
+
+.right .bm-burger-button {
+  left: initial;
+  right: 36px;
+}
+
+.bm-burger-bars {
+  background: #fff;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-menu {
+  background: #000;
+  padding: 42px 20px 0 30px;
+  font-size: 23px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+  height: 20px !important;
+  right: -1px;
+  top: -1px;
+}
+
+.bm-cross-button {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.bm-menu-wrap {
+  width: 100% !important;
+}

@@ -1,0 +1,137 @@
+.custom-calendar-wrapper {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  .react-datepicker-wrapper {
+    width: 100%;
+    .react-datepicker__input-container {
+      width: 100%;
+    }
+  }
+
+  .react-datepicker-popper[data-placement^="bottom"] {
+    margin-top: -5px;
+  }
+
+  .react-datepicker-popper[data-placement^="top"] {
+    margin-bottom: -10px;
+  }
+}
+
+.custom-date-picker {
+  font-family: 'Proxima Nova';
+  font-size: 18px;
+  text-transform: uppercase;
+  touch-action: none;
+  border-radius: 0;
+
+  &.inlined {
+    display: none;
+    z-index: 100;
+    @media (max-width: 768px) {
+      display: block;
+    }
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .react-datepicker__day, .react-datepicker__day-name {
+      width: 14%;
+    }
+    .react-datepicker__month-container {
+      width: 100%;
+    }
+  }
+
+  .react-datepicker__triangle {
+    display: none;
+    //border-bottom-color: #fff !important;
+  }
+
+  .react-datepicker__header {
+    background-color: #fff;
+  }
+
+  .react-datepicker__current-month{
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .react-datepicker__day, .react-datepicker__day-name {
+    width: 2.7rem;
+    line-height: 2.7rem;
+    margin: 0;
+  }
+
+  .react-datepicker__day--selected {
+    background-color: #000;
+    border-radius: 0;
+
+    body.hasHover &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .react-datepicker__day--outside-month {
+    color: transparent;
+    background-color: transparent;
+    pointer-events: none;
+  }
+
+  .react-datepicker__navigation {
+    outline: 0;
+    border: 0.6rem solid transparent;
+
+    &--next {
+      right: 5px;
+      border-left-color: #AAA;
+
+      body.hasHover &:hover {
+        opacity: 0.7;
+      }
+    }
+    &--previous {
+      left: 5px;
+      border-right-color: #AAA;
+
+      body.hasHover &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .react-datepicker__day:hover {
+    border-radius: 0;
+  }
+
+  &.checkin {
+    .react-datepicker__day--selected {
+      background-color: #4CBB17;
+    }
+  }
+
+  &.checkout {
+    .react-datepicker__day--selected {
+      background-color: #C21807;
+    }
+  }
+}
+
+.calendar__title_container {
+  background-color: black;
+  color: white;
+  line-height: 35px;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'proxima_nova_ltthin';
+  text-transform: none;
+  padding: 20px 30px;
+}
+
+.calendar__title_description {
+  font-family: 'Proxima Nova';
+  font-size: 30px;
+  margin-top: 2px;
+}

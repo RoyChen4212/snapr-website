@@ -37,8 +37,10 @@ export class OffersPage extends React.Component {
 
       let selectedOffer;
       if (offerName) {
-        const strOfferName = offerName.replace(/_/g, ' ');
-        selectedOffer = _.filter(offersData, offer => offer.title.toLowerCase() === strOfferName.toLowerCase());
+        selectedOffer = _.filter(
+          offers,
+          offer => encodeURIComponent(offer.title.replace(/\s/g, '_')).toLowerCase() === offerName.toLowerCase(),
+        );
         if (selectedOffer.length > 0) {
           return { isModalOpen: true, selectedOffer: selectedOffer[0], offers };
         }
@@ -68,7 +70,7 @@ export class OffersPage extends React.Component {
   };
 
   onOfferClicked = selectedOffer => {
-    Router.pushRoute(`/offers/${selectedOffer.title.toLowerCase().replace(/\s/g, '_')}`);
+    Router.pushRoute(`/offers/${encodeURIComponent(selectedOffer.title.replace(/\s/g, '_')).toLowerCase()}`);
   };
 
   onCloseModal = () => {

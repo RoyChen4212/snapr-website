@@ -17,15 +17,6 @@ import createStore from '~utils/redux/store';
 import '~utils/config/fonts';
 import RootContainer from './RootContainer';
 
-Router.events.on('routeChangeStart', () => {
-  NProgress.start();
-});
-Router.events.on('routeChangeComplete', () => {
-  NProgress.done();
-  window.scrollTo(0, 0);
-});
-Router.events.on('routeChangeError', () => NProgress.done());
-
 class MyApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
@@ -35,6 +26,27 @@ class MyApp extends App {
     }
 
     this.enableHover();
+
+    this.previousUrls = [];
+
+    Router.events.on('routeChangeStart', () => {
+      NProgress.start();
+    });
+    Router.events.on('routeChangeComplete', url => {
+      NProgress.done();
+
+      if (
+        !(
+          url === '/offers' &&
+          this.previousUrls.length > 0 &&
+          this.previousUrls[this.previousUrls.length - 1].startsWith('/offers')
+        )
+      ) {
+        window.scrollTo(0, 0);
+      }
+      this.previousUrls.push(url);
+    });
+    Router.events.on('routeChangeError', () => NProgress.done());
   }
 
   enableHover = () => {

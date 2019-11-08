@@ -39,7 +39,7 @@ export class OffersPage extends React.Component {
       if (offerName) {
         selectedOffer = _.filter(
           offers,
-          offer => encodeURIComponent(offer.title.replace(/\s/g, '_')).toLowerCase() === offerName.toLowerCase(),
+          offer => offer.title.replace(/\s/g, '_').toLowerCase() === offerName.toLowerCase(),
         );
         if (selectedOffer.length > 0) {
           return { isModalOpen: true, selectedOffer: selectedOffer[0], offers };

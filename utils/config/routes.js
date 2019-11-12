@@ -7,6 +7,7 @@ routes
   .add('hotels', '/hotels', 'HotelsPage')
   .add('conferences', '/conferences', 'HotelsPage')
   .add('apartments', '/hotels/:cityName/:hotelName', 'ApartmentsPage')
+  .add('confApartments', '/conferences/:cityName/:hotelName', 'ApartmentsPage')
   .add('offers', '/offers/:offerName?', 'OffersPage')
   .add('special-offers', '/special-offers?', 'OffersPage')
   .add('welcome', '/welcome', 'OffersPage')

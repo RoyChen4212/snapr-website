@@ -10,7 +10,15 @@ export default class Error extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '250px' }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingTop: '200px',
+          minHeight: 'calc(100vh - 450px)',
+        }}
+      >
         <H1 style={{ fontSize: '40px' }}>Page not found.</H1>
       </div>
     );

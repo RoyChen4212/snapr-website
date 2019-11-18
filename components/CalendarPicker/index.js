@@ -128,7 +128,7 @@ class CalendarPicker extends React.Component {
                 customInput={<CheckInButton />}
                 selected={moment(this.props.calendar.checkInDate).toDate()}
                 onChange={date => this.handleChangeDate(date, true)}
-                minDate={moment().toDate()}
+                minDate={new Date()}
                 popperPlacement="bottom-end"
                 calendarContainer={getCalendarContainer('Check-In')}
               />

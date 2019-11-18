@@ -59,7 +59,9 @@ class RootContainer extends React.Component {
               handleClickOutside={() => this.props.setCalendarOpen(false)}
               outsideClickIgnoreClass="CheckButton"
               minDate={
-                this.props.calendar.isCheckIn ? moment() : moment(this.props.calendar.checkInDate).add(1, 'days')
+                this.props.calendar.isCheckIn
+                  ? moment(new Date())
+                  : moment(this.props.calendar.checkInDate).add(1, 'days')
               }
             />
           )}

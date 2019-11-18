@@ -31,7 +31,7 @@ export class OffersPage extends React.Component {
         if (!offer.expiry_date) {
           return true;
         }
-        return moment(offer.expiry_date, 'YYYY-MM-DD').isSameOrAfter(moment().startOf('date'));
+        return moment(offer.expiry_date, 'YYYY-MM-DD').isSameOrAfter(moment(new Date()).startOf('date'));
       });
       offers = _.orderBy(offers, 'publish_date', 'asc');
 

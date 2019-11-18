@@ -11,8 +11,8 @@ const initialState = {
   calendar: {
     isOpen: false,
     isCheckIn: false,
-    checkInDate: moment(),
-    checkOutDate: moment().add(1, 'days'),
+    checkInDate: moment(new Date()),
+    checkOutDate: moment(new Date()).add(1, 'days'),
   },
   isMobileDevice: false,
 };

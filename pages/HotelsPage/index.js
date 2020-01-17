@@ -245,7 +245,7 @@ HotelsPage.getInitialProps = async ctx => {
   if (areaData) {
     ctx.store.dispatch(AreasDataLoaded(areaData));
   }
-  return { isConference: ctx.asPath === '/conferences', asPath: ctx.asPath };
+  return { isConference: ctx.asPath.startsWith('/conferences'), asPath: ctx.asPath };
 };
 
 HotelsPage.propTypes = {

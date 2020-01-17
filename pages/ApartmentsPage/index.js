@@ -458,7 +458,8 @@ ApartmentsPage.getInitialProps = async ctx => {
   if (confServices) {
     ctx.store.dispatch(ConfservicesDataLoaded(confServices));
   }
-  return { isConference: ctx.asPath === '/conferences', asPath: ctx.asPath, ...ctx.query };
+
+  return { isConference: ctx.asPath.startsWith('/conferences'), asPath: ctx.asPath, ...ctx.query };
 };
 
 ApartmentsPage.propTypes = {

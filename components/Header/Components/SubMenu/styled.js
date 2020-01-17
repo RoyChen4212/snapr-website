@@ -17,7 +17,6 @@ export const SubMenuWrapper = styled(DivColumn)`
 export const MenuRow = styled(DivRow)`
   flex: none;
   padding: 23px 60px;
-  align-items: center;
 
   body.hasHover &:hover {
     background-color: #232323;
@@ -73,6 +72,7 @@ export const ItemDescription = styled(ButtonLabel)`
   color: #586e65;
   text-align: left;
   font-size: 14px;
+  white-space: pre;
 
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
 `;

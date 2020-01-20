@@ -100,12 +100,13 @@ class BookModal extends React.Component {
               }}
               height={this.state.facilityHeight}
             >
-              {this.props.room.facilities.map((facility, index) => (
-                <Styled.FacilityItemWrapper key={index}>
-                  -&nbsp;&nbsp;
-                  <Styled.FacilityItem>{facility.title}</Styled.FacilityItem>
-                </Styled.FacilityItemWrapper>
-              ))}
+              {this.props.room.facilities &&
+                this.props.room.facilities.map((facility, index) => (
+                  <Styled.FacilityItemWrapper key={index}>
+                    -&nbsp;&nbsp;
+                    <Styled.FacilityItem>{facility.title}</Styled.FacilityItem>
+                  </Styled.FacilityItemWrapper>
+                ))}
             </Styled.FacilityWrapper>
 
             {this.props.room.floor_plan && <Styled.FloorImg src={this.props.room.floor_plan.src} />}

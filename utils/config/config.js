@@ -121,7 +121,7 @@ const Menu = {
         {
           title: 'Trilogy',
           description: 'Stay central across the road from\nThe Capital Menlyn Maine',
-          route: 'Menlyn_Maine',
+          route: 'Trilogy',
         },
       ],
     },

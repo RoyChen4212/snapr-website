@@ -51,7 +51,7 @@ export class ApartmentsPage extends React.Component {
       } else {
         selectedHotels = _.filter(
           nextProps.content.data.hotels,
-          hotel => hotel.has_conference && hotel.name !== 'The Capital Moloko',
+          hotel => hotel.has_conference && hotel.name !== 'The Capital Moloko' && hotel.name !== 'The Capital Trilogy',
         );
       }
 

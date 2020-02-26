@@ -54,7 +54,7 @@ class Footer extends React.Component {
               SIGNUP
             </HeaderLink>
             <HeaderLink route="/careers">CAREERS</HeaderLink>
-            <Styled.ExternalLink href="http://invest.thecapital.co.za">INVEST</Styled.ExternalLink>
+            <Styled.ExternalLink href="https://invest.thecapital.co.za">INVEST</Styled.ExternalLink>
             <HeaderLink route="/find-us">
               ABOUT US
               <br />

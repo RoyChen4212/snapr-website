@@ -61,7 +61,7 @@ const Menu = {
           description: 'Enjoy the benefits of hassle free living',
         },
       ],
-      link: 'http://invest.thecapital.co.za/',
+      link: 'https://invest.thecapital.co.za/',
     },
   ],
   HOTELS: [

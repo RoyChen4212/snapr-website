@@ -119,7 +119,7 @@ export class HotelsPage extends React.Component {
       selectedHotels = [
         {
           name: 'THE IVY Villa Hotel & Spa',
-          background: { src: 'http://theivyvillahotel.co.za/wp-content/uploads/2019/06/TEXTURE2-610x610.jpg' },
+          background: { src: 'https://theivyvillahotel.co.za/wp-content/uploads/2019/06/TEXTURE2-610x610.jpg' },
           menu_title: 'ivy',
         },
       ].concat(selectedHotels);

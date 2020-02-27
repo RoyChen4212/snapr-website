@@ -19,6 +19,12 @@ import RootContainer from './RootContainer';
 
 class MyApp extends App {
   componentDidMount() {
+    self.addEventListener('install', () => self.skipWaiting()); // eslint-disable-line
+
+    self.addEventListener('activate', () => { // eslint-disable-line
+      self.registration.unregister(); // eslint-disable-line
+    }); // eslint-disable-line
+
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {

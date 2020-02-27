@@ -23,7 +23,12 @@ class MyApp extends App {
 
     self.addEventListener('activate', () => { // eslint-disable-line
       self.registration.unregister(); // eslint-disable-line
-    }); // eslint-disable-line
+      self.clients.matchAll({ type: 'window' }).then(clients => { // eslint-disable-line
+        for (const client of clients) { // eslint-disable-line
+          client.navigate(client.url);
+        }
+      });
+    });
 
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');

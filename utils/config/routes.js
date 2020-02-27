@@ -15,4 +15,5 @@ routes
   .add('join', '/join', 'JoinPage')
   .add('find-us', '/find-us', 'FindUsPage')
   .add('blog', '/find-us/about/news/:blogName', 'OffersPage/BlogPage')
-  .add('about', '/find-us/about', 'FindUsPage/AboutUsPage');
+  .add('about', '/find-us/about', 'FindUsPage/AboutUsPage')
+  .add('sw', '/sw', 'sw');

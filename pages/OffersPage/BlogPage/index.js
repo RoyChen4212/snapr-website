@@ -12,7 +12,7 @@ import * as Styled from './styled';
 import { AboutDataLoaded } from '~utils/redux/actions';
 import { generateRandomString, throw404 } from '~utils/utils';
 
-export class BlogPage extends React.Component {
+class BlogPage extends React.Component {
   state = {
     renderKey: 'random',
   };

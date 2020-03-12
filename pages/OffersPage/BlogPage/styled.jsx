@@ -11,6 +11,7 @@ export const HtmlContent = styled(NormalH6)`
   flex: none;
   margin: 150px 0 0;
   max-width: 900px;
+  width: 100%;
   color: white;
   line-height: unset;
   font-size: unset;
@@ -51,7 +52,12 @@ export const HtmlContent = styled(NormalH6)`
     font-size: 20px;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   ${Media.phone`
-    margin: 200px 10px 0;
+    margin: 200px 0 0;
+    padding: 0 10px;
   `}
 `;

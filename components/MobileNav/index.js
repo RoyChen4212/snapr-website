@@ -105,6 +105,10 @@ class MobileNav extends React.Component {
             <i className="fas fa-user" />
             <span>FIND US</span>
           </Styled.LinkWrapper>
+          <Styled.LinkWrapper onClick={() => this.handleMenuClicked('/find-us/about')}>
+            <i className="fas fa-address-card" />
+            <span>ABOUT US</span>
+          </Styled.LinkWrapper>
         </BurgerMenu>
       </Styled.ContentWrapper>
     );

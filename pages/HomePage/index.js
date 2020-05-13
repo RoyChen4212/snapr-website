@@ -149,14 +149,23 @@ export class HomePage extends React.Component {
 }
 
 HomePage.getInitialProps = async ctx => {
-  if (!ctx.store.getState().global.content.data.home_page) {
-    const homeData = await db
-      .ref('/content/home_page')
-      .once('value')
-      .then(snapshot => snapshot.val());
-    ctx.store.dispatch(HomeDataLoaded(homeData));
+  if (ctx.res) {
+    ctx.res.writeHead(301, {
+      Location: 'https://welcome.thecapital.co.za/',
+    });
+    ctx.res.end();
   }
+
   return {};
+
+  // if (!ctx.store.getState().global.content.data.home_page) {
+  //   const homeData = await db
+  //     .ref('/content/home_page')
+  //     .once('value')
+  //     .then(snapshot => snapshot.val());
+  //   ctx.store.dispatch(HomeDataLoaded(homeData));
+  // }
+  // return {};
 };
 
 HomePage.propTypes = {

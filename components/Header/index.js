@@ -50,6 +50,11 @@ class Header extends React.Component {
     this.setState({ selectedMenu: '' });
   };
 
+  onIconClicked = () => {
+    this.onSubClicked();
+    window.location = 'https://welcome.thecapital.co.za/';
+  };
+
   handleScroll = () => {
     const scrollTop = window.pageYOffset;
     this.setState({ alpha: scrollTop > 100 ? 1 : 0 });
@@ -80,9 +85,9 @@ class Header extends React.Component {
             </Styled.LeftWrapper>
           </Styled.LeftContainer>
 
-          <Link route="/">
-            <Styled.IconImage alt="TheCapital - Icon" onClick={this.onSubClicked} />
-          </Link>
+          {/* <Link route="/"> */}
+          <Styled.IconImage alt="TheCapital - Icon" onClick={this.onIconClicked} />
+          {/* </Link> */}
 
           <Styled.LeftContainer>
             <Styled.RightWrapper>

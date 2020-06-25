@@ -16,6 +16,7 @@ import { generateRandomString } from '~utils/utils';
 import * as Styled from './styled';
 import { makeSelectCalendar, makeSelectContent } from '~utils/redux/selectors';
 import { HotelsDataLoaded, AreasDataLoaded } from '~utils/redux/actions';
+import CovidModal from './CovidModal/CovidModal';
 
 export class HotelsPage extends React.Component {
   state = {
@@ -56,6 +57,7 @@ export class HotelsPage extends React.Component {
         cities,
         asPath: nextProps.asPath,
         sliderKey: generateRandomString(5, prevState.sliderKey),
+        isCovidModalOpen: isConference,
       };
     }
     return null;
@@ -125,6 +127,10 @@ export class HotelsPage extends React.Component {
       ].concat(selectedHotels);
     }
     return selectedHotels;
+  };
+
+  onCloseModal = modal => {
+    this.setState({ [modal]: false });
   };
 
   updateWindowDimensions = () => {
@@ -210,6 +216,8 @@ export class HotelsPage extends React.Component {
         <Styled.SlideButton onClick={this.onDownSlide}>
           <Styled.SlideImg src={iconDown} />
         </Styled.SlideButton>
+
+        <CovidModal isOpen={this.state.isCovidModalOpen} onClose={() => this.onCloseModal('isCovidModalOpen')} />
       </DivColumn>
     );
   }

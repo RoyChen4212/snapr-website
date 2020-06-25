@@ -23,6 +23,7 @@ import { generateRandomString } from '~utils/utils';
 
 import * as Styled from './styled';
 import { BookModal, VideoModal, FacilityTab } from './Components';
+import CovidModal from '../HotelsPage/CovidModal/CovidModal';
 
 export class ApartmentsPage extends React.Component {
   state = {
@@ -84,6 +85,7 @@ export class ApartmentsPage extends React.Component {
         randomKey: generateRandomString(5, prevState.randomKey),
         activeFacilityKey: nextProps.isConference ? 'venues' : 'facilities',
         asPath: nextProps.asPath,
+        isCovidModalOpen: nextProps.isConference,
       };
     }
     return null;
@@ -384,6 +386,8 @@ export class ApartmentsPage extends React.Component {
             onClose={() => this.onCloseModal('isVideoModalOpen')}
           />
         )}
+
+        <CovidModal isOpen={this.state.isCovidModalOpen} onClose={() => this.onCloseModal('isCovidModalOpen')} />
       </DivColumn>
     );
   }

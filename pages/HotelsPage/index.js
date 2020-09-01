@@ -92,7 +92,7 @@ export class HotelsPage extends React.Component {
 
   onTitleClicked = title => {
     if (title === 'ivy') {
-      const url = 'https://theivyvillahotel.co.za';
+      const url = 'https://sevenvillahotel.co.za';
       const win = window.open(url, '_blank');
       win.focus();
     } else if (this.props.isConference) {
@@ -120,8 +120,8 @@ export class HotelsPage extends React.Component {
     if (areaId === '-LDjgX2MPzZNgDNwPyTd') {
       selectedHotels = [
         {
-          name: 'THE IVY Villa Hotel & Spa',
-          background: { src: 'https://theivyvillahotel.co.za/wp-content/uploads/2019/06/TEXTURE2-610x610.jpg' },
+          name: 'SEVEN Villa Hotel & Spa',
+          background: { src: 'https://sevenvillahotel.co.za/wp-content/uploads/2019/06/TEXTURE2-610x610.jpg' },
           menu_title: 'ivy',
         },
       ].concat(selectedHotels);

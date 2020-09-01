@@ -84,9 +84,9 @@ const Menu = {
           route: '20_West',
         },
         {
-          title: 'THE IVY Villa Hotel & Spa',
+          title: 'SEVEN Villa Hotel & Spa',
           description: 'Inner-city retreat',
-          link: 'https://theivyvillahotel.co.za',
+          link: 'https://sevenvillahotel.co.za/',
         },
       ],
     },
@@ -166,9 +166,9 @@ const Menu = {
           route: '20_West',
         },
         {
-          title: 'THE IVY Villa Hotel & Spa',
+          title: 'SEVEN Villa Hotel & Spa',
           description: 'Inner-city retreat',
-          link: 'https://theivyvillahotel.co.za',
+          link: 'https://sevenvillahotel.co.za/',
         },
       ],
     },

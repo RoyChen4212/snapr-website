@@ -16,4 +16,5 @@ routes
   .add('find-us', '/find-us', 'FindUsPage')
   .add('blog', '/find-us/about/news/:blogName', 'OffersPage/BlogPage')
   .add('about', '/find-us/about', 'FindUsPage/AboutUsPage')
-  .add('email-disclaimer', '/email-disclaimer', 'EmailDisclaimer');
+  .add('email-disclaimer', '/email-disclaimer', 'EmailDisclaimer')
+  .add('turnitup', '/turnitup', 'Turnitup');
